@@ -1,6 +1,8 @@
 import {
+  NativeImportLanguageProfiles,
   createCSharpRoslynNativeImporterAdapter,
   createSemanticImportSidecar,
+  createUniversalCapabilityMatrix,
   runNativeImporterAdapter
 } from '@shapeshift-labs/frontier-lang-compiler';
 
@@ -11,19 +13,29 @@ export const CSharpSupportedExtensions = Object.freeze(['.cs']);
 
 export const CSharpLanguagePackage = Object.freeze({
   packageName: '@shapeshift-labs/frontier-lang-csharp',
-  version: '0.1.0',
+  version: '0.1.1',
   sourceLanguage: CSharpSourceLanguage,
   parser: CSharpParser,
   parserAstFormat: CSharpParserAstFormat,
   supportedExtensions: CSharpSupportedExtensions,
   compilerPackage: '@shapeshift-labs/frontier-lang-compiler',
-  compilerVersion: '0.2.31'
+  compilerVersion: '0.2.39'
 });
+
+export const CSharpCapabilityLanguageProfiles = Object.freeze(
+  NativeImportLanguageProfiles.filter((profile) => profile.language === CSharpSourceLanguage)
+);
 
 export { createCSharpRoslynNativeImporterAdapter } from '@shapeshift-labs/frontier-lang-compiler';
 
 export function createCSharpNativeImporterAdapter(options = {}) {
   return createCSharpRoslynNativeImporterAdapter(options);
+}
+
+export function createCSharpLanguageCapabilityMatrix(options = {}) {
+  const languages = options.languages ?? CSharpCapabilityLanguageProfiles;
+  const adapters = options.adapters ?? [createCSharpNativeImporterAdapter(options.importerOptions ?? {})];
+  return createUniversalCapabilityMatrix({ ...options, languages, adapters });
 }
 
 function mergeAdapterOptions(input = {}, options = {}) {
