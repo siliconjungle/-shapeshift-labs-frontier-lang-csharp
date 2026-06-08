@@ -16,7 +16,7 @@ export declare const CSharpSupportedExtensions: readonly string[];
 
 export interface CSharpLanguagePackageMetadata {
   readonly packageName: '@shapeshift-labs/frontier-lang-csharp';
-  readonly version: '0.1.7';
+  readonly version: '0.1.8';
   readonly sourceLanguage: 'csharp';
   readonly parser: 'roslyn';
   readonly parserAstFormat: 'roslyn-csharp';

@@ -21,7 +21,7 @@ const ast = {
 const adapter = createCSharpNativeImporterAdapter();
 assert.equal(adapter.language, CSharpSourceLanguage);
 assert.equal(CSharpLanguagePackage.parserAstFormat, CSharpParserAstFormat);
-assert.equal(CSharpLanguagePackage.version, '0.1.7');
+assert.equal(CSharpLanguagePackage.version, '0.1.8');
 assert.equal(CSharpLanguagePackage.compilerVersion, '0.2.64');
 
 const imported = await importCSharpSource({
