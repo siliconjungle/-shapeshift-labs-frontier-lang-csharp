@@ -13,13 +13,13 @@ export const CSharpSupportedExtensions = Object.freeze(['.cs']);
 
 export const CSharpLanguagePackage = Object.freeze({
   packageName: '@shapeshift-labs/frontier-lang-csharp',
-  version: '0.1.8',
+  version: '0.1.10',
   sourceLanguage: CSharpSourceLanguage,
   parser: CSharpParser,
   parserAstFormat: CSharpParserAstFormat,
   supportedExtensions: CSharpSupportedExtensions,
   compilerPackage: '@shapeshift-labs/frontier-lang-compiler',
-  compilerVersion: '0.2.64'
+  compilerVersion: '0.2.68'
 });
 
 export const CSharpCapabilityLanguageProfiles = Object.freeze(
