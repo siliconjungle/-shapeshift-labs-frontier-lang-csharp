@@ -16,13 +16,13 @@ export declare const CSharpSupportedExtensions: readonly string[];
 
 export interface CSharpLanguagePackageMetadata {
   readonly packageName: '@shapeshift-labs/frontier-lang-csharp';
-  readonly version: '0.1.6';
+  readonly version: '0.1.7';
   readonly sourceLanguage: 'csharp';
   readonly parser: 'roslyn';
   readonly parserAstFormat: 'roslyn-csharp';
   readonly supportedExtensions: readonly string[];
   readonly compilerPackage: '@shapeshift-labs/frontier-lang-compiler';
-  readonly compilerVersion: '0.2.47';
+  readonly compilerVersion: '0.2.64';
 }
 
 export declare const CSharpLanguagePackage: CSharpLanguagePackageMetadata;
