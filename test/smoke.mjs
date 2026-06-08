@@ -21,8 +21,8 @@ const ast = {
 const adapter = createCSharpNativeImporterAdapter();
 assert.equal(adapter.language, CSharpSourceLanguage);
 assert.equal(CSharpLanguagePackage.parserAstFormat, CSharpParserAstFormat);
-assert.equal(CSharpLanguagePackage.version, '0.1.12');
-assert.equal(CSharpLanguagePackage.compilerVersion, '0.2.70');
+assert.equal(CSharpLanguagePackage.version, '0.1.13');
+assert.equal(CSharpLanguagePackage.compilerVersion, '0.2.71');
 
 const imported = await importCSharpSource({
   sourcePath: 'src/Todo.cs',
